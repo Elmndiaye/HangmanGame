@@ -1,0 +1,131 @@
+body {
+    background-image: url('../images/Fire-Flames-Background-21.jpg');
+    color: white;
+}
+
+p {
+    font-weight: 500;
+}
+
+h1 {
+    margin-top: 15px;
+    font-family: 'Metal Mania', cursive;
+    text-align: center;
+}
+
+.header img {
+    width: 100%;
+}
+
+.quote {
+    font-style: italic;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.instructions {
+    text-align: right;
+    border: 3px solid white;
+    background: rgba(204, 39, 39, 0.66);
+    margin-right: 10px;
+}
+
+.firstInstructions {
+    text-align: center;
+}
+
+.word-display {
+    border: 3px solid white;
+    background: rgba(204, 39, 39, 0.66);
+}
+
+.victory {
+    font-family: 'Metal Mania', cursive;
+    visibility: hidden;
+    text-align: center;
+}
+
+.defeat {
+    font-family: 'Metal Mania', cursive;
+    visibility: hidden;
+    text-align: center;
+}
+
+#hangmanLine {
+    margin-top: 10px;
+    font-size: 30px;
+    font-family: 'Metal Mania';
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+.pentagram {
+    border: 3px solid white;
+    background: rgba(204, 39, 39, 0.66);
+    margin-left: 10px;
+    
+}
+
+.pentagram img {
+    width: 100%;
+}
+
+.guessesLeft {
+    text-align: right;
+    font-size: 12px;
+}
+
+.guessbox {
+    border: 3px solid white;
+    background: rgba(204, 39, 39, 0.66);
+    margin-top: 10px;
+    text-align: center;
+    width: 100%;
+}
+
+#displayGuesses {
+    letter-spacing: 2px;
+}
+
+.hiddenVid {
+    display: none;
+}
+
+.btn-warning {
+    visibility: hidden;
+}
+
+#imperative {
+    -webkit-animation-name: blinker;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+
+    -moz-animation-name: blinker;
+    -moz-animation-duration: 1s;
+    -moz-animation-timing-function: linear;
+    -moz-animation-iteration-count: infinite;
+
+    animation-name: blinker;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@-moz-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@-webkit-keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}
+
+@keyframes blinker {  
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+}

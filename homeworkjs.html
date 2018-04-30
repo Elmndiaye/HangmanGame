@@ -1,36 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>World Guess Game</title>
-</head>
-<body>
-    <button class="clickMe">Click Me!</button>
-    <button class=""></button>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"></button>
+\<!doctype html>
+<html lang="en-us">
 
-    <div class="jumbotron">
-            <h1 class="display-4">Hello, world!</h1>
-            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-            <hr class="my-4">
-            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
-            <p class="lead">
-              <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
-            </p>
-          </div>
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-  <script src = "game.js"></script>
+<head>
+  <meta charset="UTF-8">
+  <title>Hangman Game</title>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link href="https://fonts.googleapis.com/css?family=Metal+Mania" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <h1>Game</h1>
+
+    <div class="container">
+        <div class="header row">
+            <div class="col-lg-8"><img src="assets/images/devil-wp-banner.jpg" class="mx-auto"></div>
+            <div class="quote col-lg-4"><p>“Depend upon it, sir, when a man knows he is to be hanged in a fortnight, it concentrates his mind wonderfully.”</p><p>― Samuel Johnson, The Life of Samuel Johnson</p></div>
+        </div>
+        
+        <br>
+
+        <div class="row main-section">
+            <div class="col-md-4 instructions">
+                <p class="firstInstructions">Can you reveal the Daemon Lords' true names and banish them back to The Pit??</p>
+                <p>Successful guesses will reveal letters, but ten misses will cost you your soul!</p>
+                <p id="imperative">Press any key to abandon all hope.</p>
+                <p>Daemon Lords banished: <span id="lordsBanished"></span></p>
+                <p>Souls lost: <span id="soulsLost"></span></p>
+            </div>
+            <div class="col-md-4 word-display">
+                <h5>Daemon Lord's Name:</h5>
+                <p id="hangmanLine"></p>
+                <div class="victory" id="victoryBanner"><h3>DAEMON LORD BANISHED!</h3></div>
+                <div class="defeat" id="defeatBanner"><h3>THEY SWALLOWED YOUR SOUL!</h3></div>
+                <button onclick="gameReset()" type="button" class="btn btn-warning mx-auto" id="warningButton">New Game</button>
+            </div>
+            <div class="col-md-3 pentagram">
+                <h5>Daemonic Ritual Progress:</h5>
+                <img id="pentagramStatus" src="assets/images/pentagram0.jpg"/>
+                <div class="guessesLeft"><p>(soul health remaining: <span id="guessesLeft"></span>)</p></div>
+            </div>
+        </div>
+        <div class="row guessbox col-md-12">
+            <p class="guessrow">Letters Guessed: <span id="displayGuesses"></span></p>
+        </div>
+    </div>
+
+
+    <script src="game.js"></script>
+
+    <div class="hiddenVid"><iframe width="560" height="315" src="https://www.youtube.com/embed/oCUMIp5Eatw?start=9&autoplay=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe></div>
+
 </body>
+
 </html>
 
-
-    
-    
-    
-    
-    
