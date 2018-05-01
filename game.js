@@ -34,7 +34,7 @@ function gameReset() {
     hiddenButton.style.visibility = "hidden";
     guessesLeft = 10;
     lettersGuessed = [];
-    secretWord = wordBank[Math.floor(Math.random()*17)];
+    secretWord = wordBank[Math.floor(Math.random()*7)];
     displayWord = '';
     while (displayWord.length < secretWord.length) {
         displayWord += '-'
@@ -56,6 +56,7 @@ document.addEventListener("keypress", gameplay)
 // document.onkeypress = function(event) {
 function gameplay() {
     var keyPressed = String.fromCharCode(event.keyCode).toUpperCase();
+    // if(keyPressed < 80 && keyPressed > 27)
     var hitIndices = [];
     if (secretWord.includes(keyPressed)) {
         //KEY PRESSED IS A HIT
